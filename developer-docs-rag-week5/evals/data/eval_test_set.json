@@ -1,0 +1,162 @@
+[
+  {
+    "id": "REG-10",
+    "problem_type": "false_refusal_regression",
+    "question": "When does a MAUI window become no longer visible in the lifecycle?",
+    "target_doc": "app-lifecycle.md",
+    "expected_section": "Cross-platform lifecycle events",
+    "is_unsupported": false,
+    "key_facts": ["Stopped state/event", "no longer visible", "VisibilityChanged on Windows"],
+    "description": "Week 5 Trace 10 regression: Ensure model synthesizes visibility event without falsely refusing."
+  },
+  {
+    "id": "REG-10-B",
+    "problem_type": "false_refusal_regression",
+    "question": "Which lifecycle event is raised when an app transitions to the background and becomes hidden?",
+    "target_doc": "app-lifecycle.md",
+    "expected_section": "Cross-platform lifecycle events",
+    "is_unsupported": false,
+    "key_facts": ["Stopped", "DidEnterBackground / VisibilityChanged"],
+    "description": "Paraphrase of window visibility/stopped transition to test semantic robustness."
+  },
+  {
+    "id": "REG-11",
+    "problem_type": "retrieval_ranking_regression",
+    "question": "How many rows and columns does Grid have if none are declared?",
+    "target_doc": "grid.md",
+    "expected_section": "Grid",
+    "is_unsupported": false,
+    "key_facts": ["one row and one column", "default"],
+    "description": "Week 5 Trace 11 regression: Retrieve chunk 0 default row/column count despite semantic competition."
+  },
+  {
+    "id": "REG-11-B",
+    "problem_type": "retrieval_ranking_regression",
+    "question": "What is the default layout structure of a Grid before adding RowDefinitions or ColumnDefinitions?",
+    "target_doc": "grid.md",
+    "expected_section": "Grid",
+    "is_unsupported": false,
+    "key_facts": ["one row and one column"],
+    "description": "Paraphrased default grid dimensions query to verify robust chunk-0 retrieval."
+  },
+  {
+    "id": "FACT-01",
+    "problem_type": "supported_fact_extraction",
+    "question": "What are the four execution states of a .NET MAUI app?",
+    "target_doc": "app-lifecycle.md",
+    "expected_section": "App lifecycle",
+    "is_unsupported": false,
+    "key_facts": ["not running", "running", "deactivated", "stopped"],
+    "description": "Core factual recall of the 4 primary app execution states."
+  },
+  {
+    "id": "FACT-02",
+    "problem_type": "supported_fact_extraction",
+    "question": "Where are dependencies registered in a .NET MAUI application?",
+    "target_doc": "dependency-injection.md",
+    "expected_section": "Registration",
+    "is_unsupported": false,
+    "key_facts": ["MauiProgram", "CreateMauiApp", "Services"],
+    "description": "Locate standard dependency injection registration method in MauiProgram."
+  },
+  {
+    "id": "FACT-03",
+    "problem_type": "supported_fact_extraction",
+    "question": "What is the difference between AddSingleton and AddTransient?",
+    "target_doc": "dependency-injection.md",
+    "expected_section": "Dependency lifetime",
+    "is_unsupported": false,
+    "key_facts": ["AddSingleton creates a single instance", "AddTransient creates every time"],
+    "description": "Direct lifetime comparison between singleton and transient services."
+  },
+  {
+    "id": "FACT-04",
+    "problem_type": "supported_fact_extraction",
+    "question": "What are the three GridUnitType values used for row heights and column widths?",
+    "target_doc": "grid.md",
+    "expected_section": "Rows and columns",
+    "is_unsupported": false,
+    "key_facts": ["Absolute", "Auto", "Star"],
+    "description": "Recall of the 3 sizing enumeration members for Grid rows and columns."
+  },
+  {
+    "id": "FACT-05",
+    "problem_type": "supported_fact_extraction",
+    "question": "What are the main parts of a XAML file described in the documentation?",
+    "target_doc": "fundamentals-get-started.md",
+    "expected_section": "Anatomy of a XAML file",
+    "is_unsupported": false,
+    "key_facts": ["root element", "XML namespaces", "child elements"],
+    "description": "Structural anatomy of a MAUI XAML page."
+  },
+  {
+    "id": "FACT-06",
+    "problem_type": "supported_fact_extraction",
+    "question": "How can XAML interact with code in a .NET MAUI application?",
+    "target_doc": "fundamentals-get-started.md",
+    "expected_section": "XAML and code interactions",
+    "is_unsupported": false,
+    "key_facts": ["events", "named elements / x:Name", "code-behind"],
+    "description": "Mechanisms connecting XAML elements to C# code-behind."
+  },
+  {
+    "id": "REFUSE-01",
+    "problem_type": "unsupported_refusal",
+    "question": "What is the maximum number of concurrent requests supported by the undocumented SDK endpoint?",
+    "target_doc": null,
+    "expected_section": null,
+    "is_unsupported": true,
+    "key_facts": ["refuse"],
+    "description": "Unsupported API endpoint query requiring standard refusal."
+  },
+  {
+    "id": "REFUSE-02",
+    "problem_type": "unsupported_refusal",
+    "question": "What is the retry_backoff_ms default for an API that does not appear in these documents?",
+    "target_doc": null,
+    "expected_section": null,
+    "is_unsupported": true,
+    "key_facts": ["refuse"],
+    "description": "Non-existent configuration setting requiring standard refusal."
+  },
+  {
+    "id": "REFUSE-03",
+    "problem_type": "unsupported_refusal",
+    "question": "What is the monthly subscription pricing of the .NET MAUI enterprise license?",
+    "target_doc": null,
+    "expected_section": null,
+    "is_unsupported": true,
+    "key_facts": ["refuse"],
+    "description": "Pricing question completely outside documentation corpus."
+  },
+  {
+    "id": "REFUSE-04",
+    "problem_type": "unsupported_refusal",
+    "question": "How do I deploy a .NET MAUI application directly to AWS Kubernetes clusters?",
+    "target_doc": null,
+    "expected_section": null,
+    "is_unsupported": true,
+    "key_facts": ["refuse"],
+    "description": "Out-of-scope cloud deployment instructions requiring refusal."
+  },
+  {
+    "id": "SYNTH-01",
+    "problem_type": "multi_chunk_synthesis",
+    "question": "How does MauiAppBuilder configure both dependency injection and font resources in CreateMauiApp?",
+    "target_doc": "dependency-injection.md",
+    "expected_section": "Registration",
+    "is_unsupported": false,
+    "key_facts": ["builder.Services", "builder.ConfigureFonts", "builder.Build()"],
+    "description": "Requires synthesizing builder service registration and font configuration."
+  },
+  {
+    "id": "SYNTH-02",
+    "problem_type": "multi_chunk_synthesis",
+    "question": "When a window is Stopped, what platform lifecycle event maps to it on Android and iOS, and what action should be taken?",
+    "target_doc": "app-lifecycle.md",
+    "expected_section": "Cross-platform lifecycle events",
+    "is_unsupported": false,
+    "key_facts": ["OnStop on Android", "DidEnterBackground on iOS", "disconnect from long running processes"],
+    "description": "Synthesizes multi-platform event mappings and recommended developer actions from lifecycle tables."
+  }
+]

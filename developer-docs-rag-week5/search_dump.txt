@@ -1,0 +1,128 @@
+
+===== BASELINE / Q1 =====
+What are the four execution states of a .NET MAUI app?
+1. app-lifecycle.md |  | score=0.8194 | distance=0.1806 | chunk=app-lifecycle-current-baseline-0
+2. app-lifecycle.md |  | score=0.7977 | distance=0.2023 | chunk=app-lifecycle-current-baseline-1
+3. app-lifecycle.md |  | score=0.7370 | distance=0.2630 | chunk=app-lifecycle-current-baseline-3
+4. app-lifecycle.md |  | score=0.7209 | distance=0.2791 | chunk=app-lifecycle-current-baseline-2
+5. app-lifecycle.md |  | score=0.6976 | distance=0.3024 | chunk=app-lifecycle-current-baseline-19
+
+===== BASELINE / Q2 =====
+Which cross-platform lifecycle event is raised when a window is no longer visible?
+1. app-lifecycle.md |  | score=0.7711 | distance=0.2289 | chunk=app-lifecycle-current-baseline-3
+2. app-lifecycle.md |  | score=0.7301 | distance=0.2699 | chunk=app-lifecycle-current-baseline-4
+3. app-lifecycle.md |  | score=0.7300 | distance=0.2700 | chunk=app-lifecycle-current-baseline-0
+4. app-lifecycle.md |  | score=0.7135 | distance=0.2865 | chunk=app-lifecycle-current-baseline-21
+5. app-lifecycle.md |  | score=0.7079 | distance=0.2921 | chunk=app-lifecycle-current-baseline-2
+
+===== BASELINE / Q3 =====
+Where are dependencies registered in a .NET MAUI application?
+1. dependency-injection.md |  | score=0.8026 | distance=0.1974 | chunk=dependency-injection-current-baseline-15
+2. dependency-injection.md |  | score=0.7876 | distance=0.2124 | chunk=dependency-injection-current-baseline-16
+3. dependency-injection.md |  | score=0.7869 | distance=0.2131 | chunk=dependency-injection-current-baseline-8
+4. dependency-injection.md |  | score=0.7792 | distance=0.2208 | chunk=dependency-injection-current-baseline-0
+5. dependency-injection.md |  | score=0.7656 | distance=0.2344 | chunk=dependency-injection-current-baseline-4
+
+===== BASELINE / Q4 =====
+What is the difference between AddSingleton and AddTransient?
+1. dependency-injection.md |  | score=0.7346 | distance=0.2654 | chunk=dependency-injection-current-baseline-11
+2. dependency-injection.md |  | score=0.7199 | distance=0.2801 | chunk=dependency-injection-current-baseline-14
+3. dependency-injection.md |  | score=0.6988 | distance=0.3012 | chunk=dependency-injection-current-baseline-15
+4. dependency-injection.md |  | score=0.6948 | distance=0.3052 | chunk=dependency-injection-current-baseline-12
+5. dependency-injection.md |  | score=0.6926 | distance=0.3074 | chunk=dependency-injection-current-baseline-6
+
+===== BASELINE / Q5 =====
+What is the default number of rows and columns in a .NET MAUI Grid?
+1. grid.md |  | score=0.8103 | distance=0.1897 | chunk=grid-current-baseline-0
+2. grid.md |  | score=0.7821 | distance=0.2179 | chunk=grid-current-baseline-2
+3. grid.md |  | score=0.7819 | distance=0.2181 | chunk=grid-current-baseline-3
+4. grid.md |  | score=0.7639 | distance=0.2361 | chunk=grid-current-baseline-4
+5. grid.md |  | score=0.7550 | distance=0.2450 | chunk=grid-current-baseline-15
+
+===== BASELINE / Q6 =====
+What are the three GridUnitType values used for row heights and column widths?
+1. grid.md |  | score=0.7569 | distance=0.2431 | chunk=grid-current-baseline-4
+2. grid.md |  | score=0.7560 | distance=0.2440 | chunk=grid-current-baseline-0
+3. grid.md |  | score=0.7455 | distance=0.2545 | chunk=grid-current-baseline-6
+4. grid.md |  | score=0.7361 | distance=0.2639 | chunk=grid-current-baseline-13
+5. grid.md |  | score=0.7355 | distance=0.2645 | chunk=grid-current-baseline-3
+
+===== BASELINE / Q7 =====
+What are the main parts of a XAML file described in the getting-started documentation?
+1. fundamentals-get-started.md |  | score=0.8128 | distance=0.1872 | chunk=fundamentals-get-started-current-baseline-0
+2. fundamentals-get-started.md |  | score=0.7433 | distance=0.2567 | chunk=fundamentals-get-started-current-baseline-4
+3. fundamentals-get-started.md |  | score=0.7292 | distance=0.2708 | chunk=fundamentals-get-started-current-baseline-5
+4. fundamentals-get-started.md |  | score=0.7215 | distance=0.2785 | chunk=fundamentals-get-started-current-baseline-2
+5. fundamentals-get-started.md |  | score=0.7070 | distance=0.2930 | chunk=fundamentals-get-started-current-baseline-10
+
+===== BASELINE / Q8 =====
+How can XAML interact with code in a .NET MAUI application?
+1. fundamentals-get-started.md |  | score=0.7861 | distance=0.2139 | chunk=fundamentals-get-started-current-baseline-0
+2. fundamentals-get-started.md |  | score=0.7779 | distance=0.2221 | chunk=fundamentals-get-started-current-baseline-14
+3. fundamentals-get-started.md |  | score=0.7571 | distance=0.2429 | chunk=fundamentals-get-started-current-baseline-4
+4. fundamentals-get-started.md |  | score=0.7370 | distance=0.2630 | chunk=fundamentals-get-started-current-baseline-17
+5. fundamentals-get-started.md |  | score=0.7330 | distance=0.2670 | chunk=fundamentals-get-started-current-baseline-16
+
+===== STRUCTURE / Q1 =====
+What are the four execution states of a .NET MAUI app?
+1. app-lifecycle.md | App lifecycle | score=0.8127 | distance=0.1873 | chunk=app-lifecycle-current-structure-0
+2. app-lifecycle.md | App lifecycle | score=0.7462 | distance=0.2538 | chunk=app-lifecycle-current-structure-1
+3. app-lifecycle.md | Android | score=0.7300 | distance=0.2700 | chunk=app-lifecycle-current-structure-9
+4. app-lifecycle.md | Windows | score=0.7280 | distance=0.2720 | chunk=app-lifecycle-current-structure-16
+5. app-lifecycle.md | iOS and Mac Catalyst | score=0.7222 | distance=0.2778 | chunk=app-lifecycle-current-structure-12
+
+===== STRUCTURE / Q2 =====
+Which cross-platform lifecycle event is raised when a window is no longer visible?
+1. app-lifecycle.md | Cross-platform lifecycle events | score=0.8136 | distance=0.1864 | chunk=app-lifecycle-current-structure-3
+2. app-lifecycle.md | Cross-platform lifecycle events | score=0.7867 | distance=0.2133 | chunk=app-lifecycle-current-structure-2
+3. app-lifecycle.md | Cross-platform lifecycle events | score=0.7762 | distance=0.2238 | chunk=app-lifecycle-current-structure-4
+4. app-lifecycle.md | App lifecycle | score=0.7356 | distance=0.2644 | chunk=app-lifecycle-current-structure-0
+5. app-lifecycle.md | Windows | score=0.7178 | distance=0.2822 | chunk=app-lifecycle-current-structure-17
+
+===== STRUCTURE / Q3 =====
+Where are dependencies registered in a .NET MAUI application?
+1. dependency-injection.md | Registration | score=0.8260 | distance=0.1740 | chunk=dependency-injection-current-structure-8
+2. dependency-injection.md | Registration | score=0.7994 | distance=0.2006 | chunk=dependency-injection-current-structure-9
+3. dependency-injection.md | Register dependencies with an extension method | score=0.7905 | distance=0.2095 | chunk=dependency-injection-current-structure-17
+4. dependency-injection.md | Register dependencies with an extension method | score=0.7866 | distance=0.2134 | chunk=dependency-injection-current-structure-16
+5. dependency-injection.md | Registration | score=0.7859 | distance=0.2141 | chunk=dependency-injection-current-structure-10
+
+===== STRUCTURE / Q4 =====
+What is the difference between AddSingleton and AddTransient?
+1. dependency-injection.md | Dependency lifetime | score=0.7799 | distance=0.2201 | chunk=dependency-injection-current-structure-12
+2. dependency-injection.md | Dependency lifetime | score=0.7424 | distance=0.2576 | chunk=dependency-injection-current-structure-14
+3. dependency-injection.md | Registration | score=0.7370 | distance=0.2630 | chunk=dependency-injection-current-structure-7
+4. dependency-injection.md | Resolution | score=0.7191 | distance=0.2809 | chunk=dependency-injection-current-structure-18
+5. dependency-injection.md | Registration | score=0.7009 | distance=0.2991 | chunk=dependency-injection-current-structure-9
+
+===== STRUCTURE / Q5 =====
+What is the default number of rows and columns in a .NET MAUI Grid?
+1. grid.md | Rows and columns | score=0.8085 | distance=0.1915 | chunk=grid-current-structure-4
+2. grid.md | Grid | score=0.7857 | distance=0.2143 | chunk=grid-current-structure-0
+3. grid.md | Rows and columns | score=0.7665 | distance=0.2335 | chunk=grid-current-structure-3
+4. grid.md | Rows and columns | score=0.7649 | distance=0.2351 | chunk=grid-current-structure-5
+5. grid.md | Rows and columns | score=0.7622 | distance=0.2378 | chunk=grid-current-structure-6
+
+===== STRUCTURE / Q6 =====
+What are the three GridUnitType values used for row heights and column widths?
+1. grid.md | Rows and columns | score=0.8249 | distance=0.1751 | chunk=grid-current-structure-5
+2. grid.md | Rows and columns | score=0.7944 | distance=0.2056 | chunk=grid-current-structure-4
+3. grid.md | Simplify row and column definitions | score=0.7581 | distance=0.2419 | chunk=grid-current-structure-13
+4. grid.md | Space between rows and columns | score=0.7559 | distance=0.2441 | chunk=grid-current-structure-14
+5. grid.md | Rows and columns | score=0.7439 | distance=0.2561 | chunk=grid-current-structure-7
+
+===== STRUCTURE / Q7 =====
+What are the main parts of a XAML file described in the getting-started documentation?
+1. fundamentals-get-started.md | Anatomy of a XAML file | score=0.8113 | distance=0.1887 | chunk=fundamentals-get-started-current-structure-0
+2. fundamentals-get-started.md | Anatomy of a XAML file | score=0.7548 | distance=0.2452 | chunk=fundamentals-get-started-current-structure-1
+3. fundamentals-get-started.md | Anatomy of a XAML file | score=0.7337 | distance=0.2663 | chunk=fundamentals-get-started-current-structure-2
+4. fundamentals-get-started.md | XAML Source Generation | score=0.7242 | distance=0.2758 | chunk=fundamentals-get-started-current-structure-5
+5. fundamentals-get-started.md | Implicit namespace declarations | score=0.7220 | distance=0.2780 | chunk=fundamentals-get-started-current-structure-10
+
+===== STRUCTURE / Q8 =====
+How can XAML interact with code in a .NET MAUI application?
+1. fundamentals-get-started.md | XAML and code interactions | score=0.7911 | distance=0.2089 | chunk=fundamentals-get-started-current-structure-14
+2. fundamentals-get-started.md | XAML and code interactions | score=0.7825 | distance=0.2175 | chunk=fundamentals-get-started-current-structure-17
+3. fundamentals-get-started.md | Anatomy of a XAML file | score=0.7710 | distance=0.2290 | chunk=fundamentals-get-started-current-structure-0
+4. fundamentals-get-started.md | Anatomy of a XAML file | score=0.7650 | distance=0.2350 | chunk=fundamentals-get-started-current-structure-4
+5. fundamentals-get-started.md | Anatomy of a XAML file | score=0.7459 | distance=0.2541 | chunk=fundamentals-get-started-current-structure-3

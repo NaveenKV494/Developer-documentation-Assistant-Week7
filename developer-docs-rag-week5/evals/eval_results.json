@@ -1,0 +1,1535 @@
+{
+  "judge_validation": {
+    "total_cases": 12,
+    "true_positives": 7,
+    "true_negatives": 5,
+    "false_positives": 0,
+    "false_negatives": 0,
+    "agreement_rate": 1.0,
+    "cohens_kappa": 1.0,
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1_score": 1.0,
+    "is_validated": true,
+    "results": [
+      {
+        "id": "CALIB_01",
+        "question": "What are the four execution states of a .NET MAUI ...",
+        "human_label": 1,
+        "judge_label": 1,
+        "judge_score": 1.0,
+        "judge_verdict": "PASS",
+        "agrees": true,
+        "matrix_type": "TP",
+        "reasoning": "The candidate answer is perfectly faithful to the context, directly answering the user's question with the exact four execution states mentioned in the documentation."
+      },
+      {
+        "id": "CALIB_02",
+        "question": "What are the four execution states of a .NET MAUI ...",
+        "human_label": 0,
+        "judge_label": 0,
+        "judge_score": 0.17,
+        "judge_verdict": "FAIL",
+        "agrees": true,
+        "matrix_type": "TN",
+        "reasoning": "The candidate answer provides incorrect information that contradicts the provided context. The context explicitly lists the four states as 'not running, running, deactivated, and stopped', while the candidate lists five different, incorrect states."
+      },
+      {
+        "id": "CALIB_03",
+        "question": "When does a MAUI window become no longer visible i...",
+        "human_label": 0,
+        "judge_label": 0,
+        "judge_score": 0.33,
+        "judge_verdict": "FAIL",
+        "agrees": true,
+        "matrix_type": "TN",
+        "reasoning": "The retrieved context explicitly states that the 'Stopped' event is raised when an app is no longer visible. The candidate answer incorrectly claimed that this information could not be found in the provided documentation, resulting in a false refusal."
+      },
+      {
+        "id": "CALIB_04",
+        "question": "When does a MAUI window become no longer visible i...",
+        "human_label": 1,
+        "judge_label": 1,
+        "judge_score": 1.0,
+        "judge_verdict": "PASS",
+        "agrees": true,
+        "matrix_type": "TP",
+        "reasoning": "The candidate answer is fully faithful to the context, directly answering the user's question about the lifecycle state when a window is no longer visible (the Stopped state, mapping to VisibilityChanged on Windows)."
+      },
+      {
+        "id": "CALIB_05",
+        "question": "What is the monthly pricing of the .NET MAUI enter...",
+        "human_label": 1,
+        "judge_label": 1,
+        "judge_score": 1.0,
+        "judge_verdict": "PASS",
+        "agrees": true,
+        "matrix_type": "TP",
+        "reasoning": "The retrieved context only discusses dependency injection in .NET MAUI and contains no information about pricing. The candidate answer correctly and honestly states that the information could not be found in the provided documentation."
+      },
+      {
+        "id": "CALIB_06",
+        "question": "What is the monthly pricing of the .NET MAUI enter...",
+        "human_label": 0,
+        "judge_label": 0,
+        "judge_score": 0.33,
+        "judge_verdict": "FAIL",
+        "agrees": true,
+        "matrix_type": "TN",
+        "reasoning": "The candidate answer hallucinated the pricing of $49 per developer per month, which is completely unsupported by the retrieved context. The context only discusses dependency injection in .NET MAUI. The model should have refused to answer due to lack of information."
+      },
+      {
+        "id": "CALIB_07",
+        "question": "What is the difference between AddSingleton and Ad...",
+        "human_label": 1,
+        "judge_label": 1,
+        "judge_score": 1.0,
+        "judge_verdict": "PASS",
+        "agrees": true,
+        "matrix_type": "TP",
+        "reasoning": "The candidate answer is completely faithful to the retrieved context, directly and accurately answering the user's question without any hallucination or extrapolation."
+      },
+      {
+        "id": "CALIB_08",
+        "question": "What is the difference between AddSingleton and Ad...",
+        "human_label": 0,
+        "judge_label": 0,
+        "judge_score": 0.17,
+        "judge_verdict": "FAIL",
+        "agrees": true,
+        "matrix_type": "TN",
+        "reasoning": "The candidate answer contains significant hallucinations. It incorrectly claims both methods create singleton instances and introduces an unsupported claim about background threads, directly contradicting the provided context."
+      },
+      {
+        "id": "CALIB_09",
+        "question": "How many rows and columns does a Grid have by defa...",
+        "human_label": 1,
+        "judge_label": 1,
+        "judge_score": 1.0,
+        "judge_verdict": "PASS",
+        "agrees": true,
+        "matrix_type": "TP",
+        "reasoning": "The candidate answer is perfectly faithful to the context, directly and concisely answers the user's question, and contains no hallucinations or errors."
+      },
+      {
+        "id": "CALIB_10",
+        "question": "How many rows and columns does a Grid have by defa...",
+        "human_label": 0,
+        "judge_label": 0,
+        "judge_score": 0.2,
+        "judge_verdict": "FAIL",
+        "agrees": true,
+        "matrix_type": "TN",
+        "reasoning": "The candidate answer fabricated information (stating a Grid has 4 rows and 4 columns by default) that is not supported by the retrieved context. The context does not contain information about the default number of rows and columns, so the candidate should have refused to answer."
+      },
+      {
+        "id": "CALIB_11",
+        "question": "What are the three GridUnitType values used for ro...",
+        "human_label": 1,
+        "judge_label": 1,
+        "judge_score": 1.0,
+        "judge_verdict": "PASS",
+        "agrees": true,
+        "matrix_type": "TP",
+        "reasoning": "The candidate answer correctly and concisely identifies the three GridUnitType values (Absolute, Auto, and Star) as explicitly stated in the retrieved context."
+      },
+      {
+        "id": "CALIB_12",
+        "question": "Can I configure AWS DynamoDB directly in MauiProgr...",
+        "human_label": 1,
+        "judge_label": 1,
+        "judge_score": 1.0,
+        "judge_verdict": "PASS",
+        "agrees": true,
+        "matrix_type": "TP",
+        "reasoning": "The provided context only mentions MauiApp.CreateBuilder() and its basic configuration capabilities (fonts, services, handlers). It contains no information about AWS DynamoDB. The candidate correctly and appropriately refused to answer due to the lack of information in the context."
+      }
+    ]
+  },
+  "evaluation": {
+    "total_test_cases": 16,
+    "overall": {
+      "baseline_score": 0.682,
+      "improved_score": 0.961,
+      "delta": 0.279
+    },
+    "problem_type_breakdown": {
+      "false_refusal_regression": {
+        "count": 2,
+        "baseline_avg": 0.458,
+        "improved_avg": 0.812,
+        "delta": 0.355
+      },
+      "retrieval_ranking_regression": {
+        "count": 2,
+        "baseline_avg": 0.812,
+        "improved_avg": 1.0,
+        "delta": 0.188
+      },
+      "supported_fact_extraction": {
+        "count": 6,
+        "baseline_avg": 0.688,
+        "improved_avg": 0.958,
+        "delta": 0.271
+      },
+      "unsupported_refusal": {
+        "count": 4,
+        "baseline_avg": 1.0,
+        "improved_avg": 1.0,
+        "delta": 0.0
+      },
+      "multi_chunk_synthesis": {
+        "count": 2,
+        "baseline_avg": 0.125,
+        "improved_avg": 1.0,
+        "delta": 0.875
+      }
+    },
+    "details": [
+      {
+        "id": "REG-10",
+        "problem_type": "false_refusal_regression",
+        "question": "When does a MAUI window become no longer visible in the lifecycle?",
+        "baseline": {
+          "answer": "I couldn't find that information in the provided documentation.",
+          "grounded": false,
+          "citations_count": 0,
+          "latency_ms": 5456.0,
+          "assertions": {
+            "passed": false,
+            "passed_count": 1,
+            "total_count": 4,
+            "pass_rate": 0.25,
+            "checks": {
+              "refusal_behavior": {
+                "passed": false,
+                "detail": "False refusal: question was supported by docs but assistant refused"
+              },
+              "citation_presence": {
+                "passed": false,
+                "detail": "Missing citations on a supported factual answer"
+              },
+              "citation_authenticity": {
+                "passed": true,
+                "detail": "No citations to validate"
+              },
+              "key_facts_coverage": {
+                "passed": false,
+                "detail": "Missing expected key fact(s): ['Stopped state/event', 'no longer visible', 'VisibilityChanged on Windows']"
+              }
+            }
+          },
+          "judge": {
+            "score": 1.0,
+            "verdict": "PASS",
+            "faithfulness": 1.0,
+            "relevancy": 1.0,
+            "reasoning": "The provided context does not explicitly state when a MAUI window becomes no longer visible in its lifecycle. It only mentions the 'Stopped' state mapping to 'VisibilityChanged' on Windows and 'DidEnterBackground' on iOS, and the 'OnVisibilityChanged' delegate on Windows. Therefore, the candidate's refusal to answer is correct and appropriate."
+          },
+          "composite_score": 0.625,
+          "passed": false
+        },
+        "improved": {
+          "answer": "In .NET MAUI, a window is no longer visible when the `Stopped` lifecycle event is raised. This event indicates that the window has transitioned to the stopped state.",
+          "grounded": true,
+          "citations_count": 1,
+          "latency_ms": 6041.9,
+          "assertions": {
+            "passed": false,
+            "passed_count": 2,
+            "total_count": 4,
+            "pass_rate": 0.5,
+            "checks": {
+              "refusal_behavior": {
+                "passed": true,
+                "detail": "Successfully answered supported question without refusing"
+              },
+              "citation_presence": {
+                "passed": true,
+                "detail": "Returned 1 citations for supported answer"
+              },
+              "citation_authenticity": {
+                "passed": false,
+                "detail": "Hallucinated chunk IDs not in context: ['73c7d7449ae3-chunk-6']"
+              },
+              "key_facts_coverage": {
+                "passed": false,
+                "detail": "Missing expected key fact(s): ['VisibilityChanged on Windows']"
+              }
+            }
+          },
+          "judge": {
+            "score": 1.0,
+            "verdict": "PASS",
+            "faithfulness": 1.0,
+            "relevancy": 1.0,
+            "reasoning": "The candidate answer is fully accurate and directly supported by the retrieved documentation. The context explicitly states that the 'Stopped' event is raised when the window is no longer visible."
+          },
+          "composite_score": 0.75,
+          "passed": false
+        },
+        "delta": 0.125
+      },
+      {
+        "id": "REG-10-B",
+        "problem_type": "false_refusal_regression",
+        "question": "Which lifecycle event is raised when an app transitions to the background and becomes hidden?",
+        "baseline": {
+          "answer": "I couldn't find that information in the provided documentation.",
+          "grounded": false,
+          "citations_count": 0,
+          "latency_ms": 4900.6,
+          "assertions": {
+            "passed": false,
+            "passed_count": 1,
+            "total_count": 4,
+            "pass_rate": 0.25,
+            "checks": {
+              "refusal_behavior": {
+                "passed": false,
+                "detail": "False refusal: question was supported by docs but assistant refused"
+              },
+              "citation_presence": {
+                "passed": false,
+                "detail": "Missing citations on a supported factual answer"
+              },
+              "citation_authenticity": {
+                "passed": true,
+                "detail": "No citations to validate"
+              },
+              "key_facts_coverage": {
+                "passed": false,
+                "detail": "Missing expected key fact(s): ['Stopped', 'DidEnterBackground / VisibilityChanged']"
+              }
+            }
+          },
+          "judge": {
+            "score": 0.33,
+            "verdict": "FAIL",
+            "faithfulness": 1.0,
+            "relevancy": 0.0,
+            "reasoning": "The documentation explicitly states that the 'Stopped' event is raised when the window is no longer visible (i.e., transitions to the background). The model incorrectly refused to answer the question."
+          },
+          "composite_score": 0.29,
+          "passed": false
+        },
+        "improved": {
+          "answer": "When the user switches to a different app or returns to the Home screen so that the app window is no longer visible, the `Deactivated` and `Stopped` events are raised, transitioning the app to the stopped state. Specifically, the `Stopped` event is raised when the window is no longer visible.",
+          "grounded": true,
+          "citations_count": 2,
+          "latency_ms": 7231.7,
+          "assertions": {
+            "passed": false,
+            "passed_count": 3,
+            "total_count": 4,
+            "pass_rate": 0.75,
+            "checks": {
+              "refusal_behavior": {
+                "passed": true,
+                "detail": "Successfully answered supported question without refusing"
+              },
+              "citation_presence": {
+                "passed": true,
+                "detail": "Returned 2 citations for supported answer"
+              },
+              "citation_authenticity": {
+                "passed": true,
+                "detail": "All 2 citations strictly match retrieved context chunks"
+              },
+              "key_facts_coverage": {
+                "passed": false,
+                "detail": "Missing expected key fact(s): ['DidEnterBackground / VisibilityChanged']"
+              }
+            }
+          },
+          "judge": {
+            "score": 1.0,
+            "verdict": "PASS",
+            "faithfulness": 1.0,
+            "relevancy": 1.0,
+            "reasoning": "The candidate answer is fully faithful to the retrieved context, which states that when an app window is no longer visible (e.g., when transitioning to the background/Home screen), the 'Deactivated' and 'Stopped' events are raised. The answer is highly relevant and directly addresses the user's question."
+          },
+          "composite_score": 0.875,
+          "passed": false
+        },
+        "delta": 0.585
+      },
+      {
+        "id": "REG-11",
+        "problem_type": "retrieval_ranking_regression",
+        "question": "How many rows and columns does Grid have if none are declared?",
+        "baseline": {
+          "answer": "I couldn't find that information in the provided documentation.",
+          "grounded": false,
+          "citations_count": 0,
+          "latency_ms": 3955.9,
+          "assertions": {
+            "passed": false,
+            "passed_count": 1,
+            "total_count": 4,
+            "pass_rate": 0.25,
+            "checks": {
+              "refusal_behavior": {
+                "passed": false,
+                "detail": "False refusal: question was supported by docs but assistant refused"
+              },
+              "citation_presence": {
+                "passed": false,
+                "detail": "Missing citations on a supported factual answer"
+              },
+              "citation_authenticity": {
+                "passed": true,
+                "detail": "No citations to validate"
+              },
+              "key_facts_coverage": {
+                "passed": false,
+                "detail": "Missing expected key fact(s): ['one row and one column', 'default']"
+              }
+            }
+          },
+          "judge": {
+            "score": 1.0,
+            "verdict": "PASS",
+            "faithfulness": 1.0,
+            "relevancy": 1.0,
+            "reasoning": "The provided documentation does not state how many rows and columns a Grid has by default if none are declared. Therefore, the candidate's refusal to answer is correct and appropriate."
+          },
+          "composite_score": 0.625,
+          "passed": false
+        },
+        "improved": {
+          "answer": "By default, a .NET MAUI Grid contains one row and one column when none are explicitly defined.",
+          "grounded": true,
+          "citations_count": 1,
+          "latency_ms": 15248.0,
+          "assertions": {
+            "passed": true,
+            "passed_count": 4,
+            "total_count": 4,
+            "pass_rate": 1.0,
+            "checks": {
+              "refusal_behavior": {
+                "passed": true,
+                "detail": "Successfully answered supported question without refusing"
+              },
+              "citation_presence": {
+                "passed": true,
+                "detail": "Returned 1 citations for supported answer"
+              },
+              "citation_authenticity": {
+                "passed": true,
+                "detail": "All 1 citations strictly match retrieved context chunks"
+              },
+              "key_facts_coverage": {
+                "passed": true,
+                "detail": "All key facts present in response"
+              }
+            }
+          },
+          "judge": {
+            "score": 1.0,
+            "verdict": "PASS",
+            "faithfulness": 1.0,
+            "relevancy": 1.0,
+            "reasoning": "The candidate answer directly and accurately answers the user's question using explicit statements from the provided documentation context (stating that a Grid contains one row and one column by default)."
+          },
+          "composite_score": 1.0,
+          "passed": true
+        },
+        "delta": 0.375
+      },
+      {
+        "id": "REG-11-B",
+        "problem_type": "retrieval_ranking_regression",
+        "question": "What is the default layout structure of a Grid before adding RowDefinitions or ColumnDefinitions?",
+        "baseline": {
+          "answer": "By default, a Grid contains one row and one column.",
+          "grounded": true,
+          "citations_count": 1,
+          "latency_ms": 22690.8,
+          "assertions": {
+            "passed": true,
+            "passed_count": 4,
+            "total_count": 4,
+            "pass_rate": 1.0,
+            "checks": {
+              "refusal_behavior": {
+                "passed": true,
+                "detail": "Successfully answered supported question without refusing"
+              },
+              "citation_presence": {
+                "passed": true,
+                "detail": "Returned 1 citations for supported answer"
+              },
+              "citation_authenticity": {
+                "passed": true,
+                "detail": "All 1 citations strictly match retrieved context chunks"
+              },
+              "key_facts_coverage": {
+                "passed": true,
+                "detail": "All key facts present in response"
+              }
+            }
+          },
+          "judge": {
+            "score": 1.0,
+            "verdict": "PASS",
+            "faithfulness": 1.0,
+            "relevancy": 1.0,
+            "reasoning": "The candidate answer directly and accurately answers the question using information explicitly found in the retrieved context (that a default Grid contains one row and one column)."
+          },
+          "composite_score": 1.0,
+          "passed": true
+        },
+        "improved": {
+          "answer": "By default, a Grid contains one row and one column.",
+          "grounded": true,
+          "citations_count": 2,
+          "latency_ms": 10592.3,
+          "assertions": {
+            "passed": true,
+            "passed_count": 4,
+            "total_count": 4,
+            "pass_rate": 1.0,
+            "checks": {
+              "refusal_behavior": {
+                "passed": true,
+                "detail": "Successfully answered supported question without refusing"
+              },
+              "citation_presence": {
+                "passed": true,
+                "detail": "Returned 2 citations for supported answer"
+              },
+              "citation_authenticity": {
+                "passed": true,
+                "detail": "All 2 citations strictly match retrieved context chunks"
+              },
+              "key_facts_coverage": {
+                "passed": true,
+                "detail": "All key facts present in response"
+              }
+            }
+          },
+          "judge": {
+            "score": 1.0,
+            "verdict": "PASS",
+            "faithfulness": 1.0,
+            "relevancy": 1.0,
+            "reasoning": "The candidate answer directly and accurately addresses the question using information explicitly found in the provided documentation context (stating that a default Grid contains one row and one column)."
+          },
+          "composite_score": 1.0,
+          "passed": true
+        },
+        "delta": 0.0
+      },
+      {
+        "id": "FACT-01",
+        "problem_type": "supported_fact_extraction",
+        "question": "What are the four execution states of a .NET MAUI app?",
+        "baseline": {
+          "answer": ".NET Multi-platform App UI (.NET MAUI) apps generally have four execution states: not running, running, deactivated, and stopped.",
+          "grounded": true,
+          "citations_count": 1,
+          "latency_ms": 5886.3,
+          "assertions": {
+            "passed": true,
+            "passed_count": 4,
+            "total_count": 4,
+            "pass_rate": 1.0,
+            "checks": {
+              "refusal_behavior": {
+                "passed": true,
+                "detail": "Successfully answered supported question without refusing"
+              },
+              "citation_presence": {
+                "passed": true,
+                "detail": "Returned 1 citations for supported answer"
+              },
+              "citation_authenticity": {
+                "passed": true,
+                "detail": "All 1 citations strictly match retrieved context chunks"
+              },
+              "key_facts_coverage": {
+                "passed": true,
+                "detail": "All key facts present in response"
+              }
+            }
+          },
+          "judge": {
+            "score": 1.0,
+            "verdict": "PASS",
+            "faithfulness": 1.0,
+            "relevancy": 1.0,
+            "reasoning": "The candidate answer directly and accurately lists the four execution states of a .NET MAUI app as stated in the documentation context."
+          },
+          "composite_score": 1.0,
+          "passed": true
+        },
+        "improved": {
+          "answer": "The four execution states of a .NET MAUI app are not running, running, deactivated, and stopped.",
+          "grounded": true,
+          "citations_count": 1,
+          "latency_ms": 19057.3,
+          "assertions": {
+            "passed": true,
+            "passed_count": 4,
+            "total_count": 4,
+            "pass_rate": 1.0,
+            "checks": {
+              "refusal_behavior": {
+                "passed": true,
+                "detail": "Successfully answered supported question without refusing"
+              },
+              "citation_presence": {
+                "passed": true,
+                "detail": "Returned 1 citations for supported answer"
+              },
+              "citation_authenticity": {
+                "passed": true,
+                "detail": "All 1 citations strictly match retrieved context chunks"
+              },
+              "key_facts_coverage": {
+                "passed": true,
+                "detail": "All key facts present in response"
+              }
+            }
+          },
+          "judge": {
+            "score": 1.0,
+            "verdict": "PASS",
+            "faithfulness": 1.0,
+            "relevancy": 1.0,
+            "reasoning": "The candidate answer directly and correctly identifies the four execution states of a .NET MAUI app as stated in the documentation context (not running, running, deactivated, and stopped)."
+          },
+          "composite_score": 1.0,
+          "passed": true
+        },
+        "delta": 0.0
+      },
+      {
+        "id": "FACT-02",
+        "problem_type": "supported_fact_extraction",
+        "question": "Where are dependencies registered in a .NET MAUI application?",
+        "baseline": {
+          "answer": "The registration of types requiring dependency injection should be performed in a single method in your app. Apps should typically perform this in the `CreateMauiApp` method in the `MauiProgram` class.",
+          "grounded": true,
+          "citations_count": 1,
+          "latency_ms": 5762.7,
+          "assertions": {
+            "passed": false,
+            "passed_count": 3,
+            "total_count": 4,
+            "pass_rate": 0.75,
+            "checks": {
+              "refusal_behavior": {
+                "passed": true,
+                "detail": "Successfully answered supported question without refusing"
+              },
+              "citation_presence": {
+                "passed": true,
+                "detail": "Returned 1 citations for supported answer"
+              },
+              "citation_authenticity": {
+                "passed": true,
+                "detail": "All 1 citations strictly match retrieved context chunks"
+              },
+              "key_facts_coverage": {
+                "passed": false,
+                "detail": "Missing expected key fact(s): ['Services']"
+              }
+            }
+          },
+          "judge": {
+            "score": 1.0,
+            "verdict": "PASS",
+            "faithfulness": 1.0,
+            "relevancy": 1.0,
+            "reasoning": "The candidate answer directly and accurately addresses where dependencies are registered in a .NET MAUI application, citing the exact location (the CreateMauiApp method in the MauiProgram class) supported directly by the provided documentation context."
+          },
+          "composite_score": 0.875,
+          "passed": false
+        },
+        "improved": {
+          "answer": "In a .NET MAUI application, dependencies are typically registered in the `CreateMauiApp` method of the `MauiProgram` class. This registration is performed using the `Services` property (of type `IServiceCollection`) on the `MauiAppBuilder` object.",
+          "grounded": true,
+          "citations_count": 2,
+          "latency_ms": 12843.4,
+          "assertions": {
+            "passed": true,
+            "passed_count": 4,
+            "total_count": 4,
+            "pass_rate": 1.0,
+            "checks": {
+              "refusal_behavior": {
+                "passed": true,
+                "detail": "Successfully answered supported question without refusing"
+              },
+              "citation_presence": {
+                "passed": true,
+                "detail": "Returned 2 citations for supported answer"
+              },
+              "citation_authenticity": {
+                "passed": true,
+                "detail": "All 2 citations strictly match retrieved context chunks"
+              },
+              "key_facts_coverage": {
+                "passed": true,
+                "detail": "All key facts present in response"
+              }
+            }
+          },
+          "judge": {
+            "score": 1.0,
+            "verdict": "PASS",
+            "faithfulness": 1.0,
+            "relevancy": 1.0,
+            "reasoning": "The candidate answer directly addresses the question and is completely grounded in the provided documentation context, which states that dependencies are typically registered in the CreateMauiApp method of the MauiProgram class using the Services property of the MauiAppBuilder object."
+          },
+          "composite_score": 1.0,
+          "passed": true
+        },
+        "delta": 0.125
+      },
+      {
+        "id": "FACT-03",
+        "problem_type": "supported_fact_extraction",
+        "question": "What is the difference between AddSingleton and AddTransient?",
+        "baseline": {
+          "answer": "`AddSingleton<T>` creates a single instance of the object which will remain for the lifetime of the app. `AddTransient<T>` creates a new instance of the object when requested during resolution. Transient objects do not have a pre-defined lifetime, but will typically follow the lifetime of their host.",
+          "grounded": true,
+          "citations_count": 1,
+          "latency_ms": 15579.4,
+          "assertions": {
+            "passed": true,
+            "passed_count": 4,
+            "total_count": 4,
+            "pass_rate": 1.0,
+            "checks": {
+              "refusal_behavior": {
+                "passed": true,
+                "detail": "Successfully answered supported question without refusing"
+              },
+              "citation_presence": {
+                "passed": true,
+                "detail": "Returned 1 citations for supported answer"
+              },
+              "citation_authenticity": {
+                "passed": true,
+                "detail": "All 1 citations strictly match retrieved context chunks"
+              },
+              "key_facts_coverage": {
+                "passed": true,
+                "detail": "All key facts present in response"
+              }
+            }
+          },
+          "judge": {
+            "score": 1.0,
+            "verdict": "PASS",
+            "faithfulness": 1.0,
+            "relevancy": 1.0,
+            "reasoning": "The candidate answer is fully faithful to the context, directly quoting the definitions of AddSingleton and AddTransient. It perfectly and concisely answers the user's question."
+          },
+          "composite_score": 1.0,
+          "passed": true
+        },
+        "improved": {
+          "answer": "AddSingleton<T> creates a single instance of the object that remains for the lifetime of the app. When resolved, the container returns this singleton instance (creating it on the first call if required) and maintains a reference to it. In contrast, AddTransient<T> creates a new instance of the object whenever requested during resolution, and the container does not maintain a reference to it. Transient objects do not have a pre-defined lifetime, but typically follow the lifetime of their host.",
+          "grounded": true,
+          "citations_count": 2,
+          "latency_ms": 57379.2,
+          "assertions": {
+            "passed": true,
+            "passed_count": 4,
+            "total_count": 4,
+            "pass_rate": 1.0,
+            "checks": {
+              "refusal_behavior": {
+                "passed": true,
+                "detail": "Successfully answered supported question without refusing"
+              },
+              "citation_presence": {
+                "passed": true,
+                "detail": "Returned 2 citations for supported answer"
+              },
+              "citation_authenticity": {
+                "passed": true,
+                "detail": "All 2 citations strictly match retrieved context chunks"
+              },
+              "key_facts_coverage": {
+                "passed": true,
+                "detail": "All key facts present in response"
+              }
+            }
+          },
+          "judge": {
+            "score": 1.0,
+            "verdict": "PASS",
+            "faithfulness": 1.0,
+            "relevancy": 1.0,
+            "reasoning": "The candidate answer is highly accurate, fully faithful to the provided context, and directly answers the user's question. Every claim about AddSingleton and AddTransient is explicitly supported by the retrieved documentation."
+          },
+          "composite_score": 1.0,
+          "passed": true
+        },
+        "delta": 0.0
+      },
+      {
+        "id": "FACT-04",
+        "problem_type": "supported_fact_extraction",
+        "question": "What are the three GridUnitType values used for row heights and column widths?",
+        "baseline": {
+          "answer": "The three values are:\n- `Absolute` \u2013 the row height or column width is a value in device-independent units (a number in XAML).\n- `Auto` \u2013 the row height or column width is autosized based on the cell contents (`Auto` in XAML).\n- `Star` \u2013 leftover row height or column width is allocated proportionally (a number followed by `*` in XAML).",
+          "grounded": true,
+          "citations_count": 1,
+          "latency_ms": 8127.5,
+          "assertions": {
+            "passed": true,
+            "passed_count": 4,
+            "total_count": 4,
+            "pass_rate": 1.0,
+            "checks": {
+              "refusal_behavior": {
+                "passed": true,
+                "detail": "Successfully answered supported question without refusing"
+              },
+              "citation_presence": {
+                "passed": true,
+                "detail": "Returned 1 citations for supported answer"
+              },
+              "citation_authenticity": {
+                "passed": true,
+                "detail": "All 1 citations strictly match retrieved context chunks"
+              },
+              "key_facts_coverage": {
+                "passed": true,
+                "detail": "All key facts present in response"
+              }
+            }
+          },
+          "judge": {
+            "score": 1.0,
+            "verdict": "PASS",
+            "faithfulness": 1.0,
+            "relevancy": 1.0,
+            "reasoning": "The candidate answer accurately identifies the three GridUnitType values (Absolute, Auto, Star) and correctly provides their descriptions based entirely on the retrieved context."
+          },
+          "composite_score": 1.0,
+          "passed": true
+        },
+        "improved": {
+          "answer": "The three GridUnitType values used for row heights and column widths are Absolute, Auto, and Star.",
+          "grounded": true,
+          "citations_count": 1,
+          "latency_ms": 2096.3,
+          "assertions": {
+            "passed": true,
+            "passed_count": 4,
+            "total_count": 4,
+            "pass_rate": 1.0,
+            "checks": {
+              "refusal_behavior": {
+                "passed": true,
+                "detail": "Successfully answered supported question without refusing"
+              },
+              "citation_presence": {
+                "passed": true,
+                "detail": "Returned 1 citations for supported answer"
+              },
+              "citation_authenticity": {
+                "passed": true,
+                "detail": "All 1 citations strictly match retrieved context chunks"
+              },
+              "key_facts_coverage": {
+                "passed": true,
+                "detail": "All key facts present in response"
+              }
+            }
+          },
+          "judge": {
+            "score": 1.0,
+            "verdict": "PASS",
+            "faithfulness": 1.0,
+            "relevancy": 1.0,
+            "reasoning": "The candidate correctly identified the three GridUnitType values (Absolute, Auto, and Star) as explicitly stated in the provided documentation."
+          },
+          "composite_score": 1.0,
+          "passed": true
+        },
+        "delta": 0.0
+      },
+      {
+        "id": "FACT-05",
+        "problem_type": "supported_fact_extraction",
+        "question": "What are the main parts of a XAML file described in the documentation?",
+        "baseline": {
+          "answer": "I couldn't find that information in the provided documentation.",
+          "grounded": false,
+          "citations_count": 0,
+          "latency_ms": 2458.7,
+          "assertions": {
+            "passed": false,
+            "passed_count": 1,
+            "total_count": 4,
+            "pass_rate": 0.25,
+            "checks": {
+              "refusal_behavior": {
+                "passed": false,
+                "detail": "False refusal: question was supported by docs but assistant refused"
+              },
+              "citation_presence": {
+                "passed": false,
+                "detail": "Missing citations on a supported factual answer"
+              },
+              "citation_authenticity": {
+                "passed": true,
+                "detail": "No citations to validate"
+              },
+              "key_facts_coverage": {
+                "passed": false,
+                "detail": "Missing expected key fact(s): ['root element', 'XML namespaces', 'child elements']"
+              }
+            }
+          },
+          "judge": {
+            "score": 0.0,
+            "verdict": "FAIL",
+            "faithfulness": 0.0,
+            "relevancy": 0.0,
+            "reasoning": "The documentation explicitly describes the anatomy of a XAML file, including XML namespaces, the root element, the x:Class attribute, and the relationship between classes, properties, and XML elements. The model incorrectly refused to answer the question."
+          },
+          "composite_score": 0.125,
+          "passed": false
+        },
+        "improved": {
+          "answer": "A .NET MAUI XAML file typically includes XML namespace (xmlns) declarations (such as the standard .NET MAUI schema and the XAML intrinsic namespace 'x'), and it can include an `x:Class` attribute on the root element to specify a fully qualified .NET class name that derives from a class like ContentPage. Inside the XAML file, classes appear as XML elements and their properties appear as XML attributes.",
+          "grounded": true,
+          "citations_count": 3,
+          "latency_ms": 2707.7,
+          "assertions": {
+            "passed": false,
+            "passed_count": 3,
+            "total_count": 4,
+            "pass_rate": 0.75,
+            "checks": {
+              "refusal_behavior": {
+                "passed": true,
+                "detail": "Successfully answered supported question without refusing"
+              },
+              "citation_presence": {
+                "passed": true,
+                "detail": "Returned 3 citations for supported answer"
+              },
+              "citation_authenticity": {
+                "passed": true,
+                "detail": "All 3 citations strictly match retrieved context chunks"
+              },
+              "key_facts_coverage": {
+                "passed": false,
+                "detail": "Missing expected key fact(s): ['XML namespaces']"
+              }
+            }
+          },
+          "judge": {
+            "score": 1.0,
+            "verdict": "PASS",
+            "faithfulness": 1.0,
+            "relevancy": 1.0,
+            "reasoning": "The candidate answer accurately identifies the main components of a XAML file as described in the provided documentation, including XML namespaces, the x:Class attribute, and the mapping of classes to elements and properties to attributes."
+          },
+          "composite_score": 0.875,
+          "passed": false
+        },
+        "delta": 0.75
+      },
+      {
+        "id": "FACT-06",
+        "problem_type": "supported_fact_extraction",
+        "question": "How can XAML interact with code in a .NET MAUI application?",
+        "baseline": {
+          "answer": "I couldn't find that information in the provided documentation.",
+          "grounded": false,
+          "citations_count": 0,
+          "latency_ms": 1875.8,
+          "assertions": {
+            "passed": false,
+            "passed_count": 1,
+            "total_count": 4,
+            "pass_rate": 0.25,
+            "checks": {
+              "refusal_behavior": {
+                "passed": false,
+                "detail": "False refusal: question was supported by docs but assistant refused"
+              },
+              "citation_presence": {
+                "passed": false,
+                "detail": "Missing citations on a supported factual answer"
+              },
+              "citation_authenticity": {
+                "passed": true,
+                "detail": "No citations to validate"
+              },
+              "key_facts_coverage": {
+                "passed": false,
+                "detail": "Missing expected key fact(s): ['events', 'named elements / x:Name', 'code-behind']"
+              }
+            }
+          },
+          "judge": {
+            "score": 0.0,
+            "verdict": "FAIL",
+            "faithfulness": 0.0,
+            "relevancy": 0.0,
+            "reasoning": "The documentation explicitly explains how XAML interacts with code-behind (using x:Class, x:Name, and event handlers like ValueChanged or Clicked), but the model incorrectly claimed the information was missing."
+          },
+          "composite_score": 0.125,
+          "passed": false
+        },
+        "improved": {
+          "answer": "In a .NET MAUI application, XAML works together with a C# code-behind file to provide code support for the markup. Together, these files contribute to a new class definition that includes child views and property initialization, and links between the markup and code are established. At runtime, the constructor calls `InitializeComponent`, which initializes objects defined in the XAML file, connects them in parent-child relationships, attaches event handlers defined in code to events set in the XAML file, and sets the resultant object tree as the page's content.",
+          "grounded": true,
+          "citations_count": 2,
+          "latency_ms": 2476.8,
+          "assertions": {
+            "passed": false,
+            "passed_count": 3,
+            "total_count": 4,
+            "pass_rate": 0.75,
+            "checks": {
+              "refusal_behavior": {
+                "passed": true,
+                "detail": "Successfully answered supported question without refusing"
+              },
+              "citation_presence": {
+                "passed": true,
+                "detail": "Returned 2 citations for supported answer"
+              },
+              "citation_authenticity": {
+                "passed": true,
+                "detail": "All 2 citations strictly match retrieved context chunks"
+              },
+              "key_facts_coverage": {
+                "passed": false,
+                "detail": "Missing expected key fact(s): ['named elements / x:Name']"
+              }
+            }
+          },
+          "judge": {
+            "score": 1.0,
+            "verdict": "PASS",
+            "faithfulness": 1.0,
+            "relevancy": 1.0,
+            "reasoning": "The answer accurately explains how XAML and code-behind interact in .NET MAUI, citing the role of partial classes, InitializeComponent, and event handling as described in the provided documentation."
+          },
+          "composite_score": 0.875,
+          "passed": false
+        },
+        "delta": 0.75
+      },
+      {
+        "id": "REFUSE-01",
+        "problem_type": "unsupported_refusal",
+        "question": "What is the maximum number of concurrent requests supported by the undocumented SDK endpoint?",
+        "baseline": {
+          "answer": "I couldn't find that information in the provided documentation.",
+          "grounded": false,
+          "citations_count": 0,
+          "latency_ms": 1687.9,
+          "assertions": {
+            "passed": true,
+            "passed_count": 4,
+            "total_count": 4,
+            "pass_rate": 1.0,
+            "checks": {
+              "refusal_behavior": {
+                "passed": true,
+                "detail": "Correctly refused unsupported question with grounded=False"
+              },
+              "citation_presence": {
+                "passed": true,
+                "detail": "Correctly returned zero citations for refusal"
+              },
+              "citation_authenticity": {
+                "passed": true,
+                "detail": "No citations to validate"
+              },
+              "key_facts_coverage": {
+                "passed": true,
+                "detail": "N/A for unsupported or empty key facts"
+              }
+            }
+          },
+          "judge": {
+            "score": 1.0,
+            "verdict": "PASS",
+            "faithfulness": 1.0,
+            "relevancy": 1.0,
+            "reasoning": "The provided documentation does not contain information regarding an undocumented SDK endpoint or its concurrent request limits. The model correctly identified that the information was missing and refused to answer."
+          },
+          "composite_score": 1.0,
+          "passed": true
+        },
+        "improved": {
+          "answer": "I couldn't find that information in the provided documentation.",
+          "grounded": false,
+          "citations_count": 0,
+          "latency_ms": 1754.2,
+          "assertions": {
+            "passed": true,
+            "passed_count": 4,
+            "total_count": 4,
+            "pass_rate": 1.0,
+            "checks": {
+              "refusal_behavior": {
+                "passed": true,
+                "detail": "Correctly refused unsupported question with grounded=False"
+              },
+              "citation_presence": {
+                "passed": true,
+                "detail": "Correctly returned zero citations for refusal"
+              },
+              "citation_authenticity": {
+                "passed": true,
+                "detail": "No citations to validate"
+              },
+              "key_facts_coverage": {
+                "passed": true,
+                "detail": "N/A for unsupported or empty key facts"
+              }
+            }
+          },
+          "judge": {
+            "score": 1.0,
+            "verdict": "PASS",
+            "faithfulness": 1.0,
+            "relevancy": 1.0,
+            "reasoning": "The provided documentation does not contain information regarding an undocumented SDK endpoint or its concurrent request limits. The model correctly identified this and refused to answer."
+          },
+          "composite_score": 1.0,
+          "passed": true
+        },
+        "delta": 0.0
+      },
+      {
+        "id": "REFUSE-02",
+        "problem_type": "unsupported_refusal",
+        "question": "What is the retry_backoff_ms default for an API that does not appear in these documents?",
+        "baseline": {
+          "answer": "I couldn't find that information in the provided documentation.",
+          "grounded": false,
+          "citations_count": 0,
+          "latency_ms": 1813.6,
+          "assertions": {
+            "passed": true,
+            "passed_count": 4,
+            "total_count": 4,
+            "pass_rate": 1.0,
+            "checks": {
+              "refusal_behavior": {
+                "passed": true,
+                "detail": "Correctly refused unsupported question with grounded=False"
+              },
+              "citation_presence": {
+                "passed": true,
+                "detail": "Correctly returned zero citations for refusal"
+              },
+              "citation_authenticity": {
+                "passed": true,
+                "detail": "No citations to validate"
+              },
+              "key_facts_coverage": {
+                "passed": true,
+                "detail": "N/A for unsupported or empty key facts"
+              }
+            }
+          },
+          "judge": {
+            "score": 1.0,
+            "verdict": "PASS",
+            "faithfulness": 1.0,
+            "relevancy": 1.0,
+            "reasoning": "The provided documentation does not contain information about 'retry_backoff_ms', so the model correctly refused to answer."
+          },
+          "composite_score": 1.0,
+          "passed": true
+        },
+        "improved": {
+          "answer": "I couldn't find that information in the provided documentation.",
+          "grounded": false,
+          "citations_count": 0,
+          "latency_ms": 1729.8,
+          "assertions": {
+            "passed": true,
+            "passed_count": 4,
+            "total_count": 4,
+            "pass_rate": 1.0,
+            "checks": {
+              "refusal_behavior": {
+                "passed": true,
+                "detail": "Correctly refused unsupported question with grounded=False"
+              },
+              "citation_presence": {
+                "passed": true,
+                "detail": "Correctly returned zero citations for refusal"
+              },
+              "citation_authenticity": {
+                "passed": true,
+                "detail": "No citations to validate"
+              },
+              "key_facts_coverage": {
+                "passed": true,
+                "detail": "N/A for unsupported or empty key facts"
+              }
+            }
+          },
+          "judge": {
+            "score": 1.0,
+            "verdict": "PASS",
+            "faithfulness": 1.0,
+            "relevancy": 1.0,
+            "reasoning": "The provided documentation does not contain information regarding 'retry_backoff_ms', so the model correctly identified that the information was missing and refused to answer."
+          },
+          "composite_score": 1.0,
+          "passed": true
+        },
+        "delta": 0.0
+      },
+      {
+        "id": "REFUSE-03",
+        "problem_type": "unsupported_refusal",
+        "question": "What is the monthly subscription pricing of the .NET MAUI enterprise license?",
+        "baseline": {
+          "answer": "I couldn't find that information in the provided documentation.",
+          "grounded": false,
+          "citations_count": 0,
+          "latency_ms": 1604.0,
+          "assertions": {
+            "passed": true,
+            "passed_count": 4,
+            "total_count": 4,
+            "pass_rate": 1.0,
+            "checks": {
+              "refusal_behavior": {
+                "passed": true,
+                "detail": "Correctly refused unsupported question with grounded=False"
+              },
+              "citation_presence": {
+                "passed": true,
+                "detail": "Correctly returned zero citations for refusal"
+              },
+              "citation_authenticity": {
+                "passed": true,
+                "detail": "No citations to validate"
+              },
+              "key_facts_coverage": {
+                "passed": true,
+                "detail": "N/A for unsupported or empty key facts"
+              }
+            }
+          },
+          "judge": {
+            "score": 1.0,
+            "verdict": "PASS",
+            "faithfulness": 1.0,
+            "relevancy": 1.0,
+            "reasoning": "The provided documentation does not contain information regarding .NET MAUI enterprise license pricing. The model correctly identified this and refused to answer."
+          },
+          "composite_score": 1.0,
+          "passed": true
+        },
+        "improved": {
+          "answer": "I couldn't find that information in the provided documentation.",
+          "grounded": false,
+          "citations_count": 0,
+          "latency_ms": 2104.8,
+          "assertions": {
+            "passed": true,
+            "passed_count": 4,
+            "total_count": 4,
+            "pass_rate": 1.0,
+            "checks": {
+              "refusal_behavior": {
+                "passed": true,
+                "detail": "Correctly refused unsupported question with grounded=False"
+              },
+              "citation_presence": {
+                "passed": true,
+                "detail": "Correctly returned zero citations for refusal"
+              },
+              "citation_authenticity": {
+                "passed": true,
+                "detail": "No citations to validate"
+              },
+              "key_facts_coverage": {
+                "passed": true,
+                "detail": "N/A for unsupported or empty key facts"
+              }
+            }
+          },
+          "judge": {
+            "score": 1.0,
+            "verdict": "PASS",
+            "faithfulness": 1.0,
+            "relevancy": 1.0,
+            "reasoning": "The provided documentation does not contain information regarding the pricing of .NET MAUI enterprise licenses. The model correctly identified this and refused to answer."
+          },
+          "composite_score": 1.0,
+          "passed": true
+        },
+        "delta": 0.0
+      },
+      {
+        "id": "REFUSE-04",
+        "problem_type": "unsupported_refusal",
+        "question": "How do I deploy a .NET MAUI application directly to AWS Kubernetes clusters?",
+        "baseline": {
+          "answer": "I couldn't find that information in the provided documentation.",
+          "grounded": false,
+          "citations_count": 0,
+          "latency_ms": 1987.3,
+          "assertions": {
+            "passed": true,
+            "passed_count": 4,
+            "total_count": 4,
+            "pass_rate": 1.0,
+            "checks": {
+              "refusal_behavior": {
+                "passed": true,
+                "detail": "Correctly refused unsupported question with grounded=False"
+              },
+              "citation_presence": {
+                "passed": true,
+                "detail": "Correctly returned zero citations for refusal"
+              },
+              "citation_authenticity": {
+                "passed": true,
+                "detail": "No citations to validate"
+              },
+              "key_facts_coverage": {
+                "passed": true,
+                "detail": "N/A for unsupported or empty key facts"
+              }
+            }
+          },
+          "judge": {
+            "score": 1.0,
+            "verdict": "PASS",
+            "faithfulness": 1.0,
+            "relevancy": 1.0,
+            "reasoning": "The provided documentation only covers dependency injection in .NET MAUI and does not contain information regarding deployment to AWS Kubernetes clusters. The model correctly identified that the information was missing and refused to answer."
+          },
+          "composite_score": 1.0,
+          "passed": true
+        },
+        "improved": {
+          "answer": "I couldn't find that information in the provided documentation.",
+          "grounded": false,
+          "citations_count": 0,
+          "latency_ms": 1809.7,
+          "assertions": {
+            "passed": true,
+            "passed_count": 4,
+            "total_count": 4,
+            "pass_rate": 1.0,
+            "checks": {
+              "refusal_behavior": {
+                "passed": true,
+                "detail": "Correctly refused unsupported question with grounded=False"
+              },
+              "citation_presence": {
+                "passed": true,
+                "detail": "Correctly returned zero citations for refusal"
+              },
+              "citation_authenticity": {
+                "passed": true,
+                "detail": "No citations to validate"
+              },
+              "key_facts_coverage": {
+                "passed": true,
+                "detail": "N/A for unsupported or empty key facts"
+              }
+            }
+          },
+          "judge": {
+            "score": 1.0,
+            "verdict": "PASS",
+            "faithfulness": 1.0,
+            "relevancy": 1.0,
+            "reasoning": "The provided documentation covers dependency injection and app lifecycle in .NET MAUI, but contains no information regarding deployment to AWS Kubernetes clusters. The model correctly identified that the information was missing."
+          },
+          "composite_score": 1.0,
+          "passed": true
+        },
+        "delta": 0.0
+      },
+      {
+        "id": "SYNTH-01",
+        "problem_type": "multi_chunk_synthesis",
+        "question": "How does MauiAppBuilder configure both dependency injection and font resources in CreateMauiApp?",
+        "baseline": {
+          "answer": "I couldn't find that information in the provided documentation.",
+          "grounded": false,
+          "citations_count": 0,
+          "latency_ms": 1543.3,
+          "assertions": {
+            "passed": false,
+            "passed_count": 1,
+            "total_count": 4,
+            "pass_rate": 0.25,
+            "checks": {
+              "refusal_behavior": {
+                "passed": false,
+                "detail": "False refusal: question was supported by docs but assistant refused"
+              },
+              "citation_presence": {
+                "passed": false,
+                "detail": "Missing citations on a supported factual answer"
+              },
+              "citation_authenticity": {
+                "passed": true,
+                "detail": "No citations to validate"
+              },
+              "key_facts_coverage": {
+                "passed": false,
+                "detail": "Missing expected key fact(s): ['builder.Services', 'builder.ConfigureFonts', 'builder.Build()']"
+              }
+            }
+          },
+          "judge": {
+            "score": 0.0,
+            "verdict": "FAIL",
+            "faithfulness": 0.0,
+            "relevancy": 0.0,
+            "reasoning": "The candidate answer incorrectly claims the information is missing. The provided context explicitly contains code examples showing how to use the MauiAppBuilder to configure fonts via ConfigureFonts and dependency injection via the Services property within the CreateMauiApp method."
+          },
+          "composite_score": 0.125,
+          "passed": false
+        },
+        "improved": {
+          "answer": "In the CreateMauiApp method, MauiApp.CreateBuilder() is called to create a MauiAppBuilder object. The builder then configures font resources by calling UseMauiApp<App>() and ConfigureFonts(fonts => { fonts.AddFont(\"OpenSans-Regular.ttf\", \"OpenSansRegular\"); fonts.AddFont(\"OpenSans-Semibold.ttf\", \"OpenSansSemibold\"); }), and dependency injection types are registered using the Services property on the builder (such as using AddTransient or AddSingleton methods). Finally, builder.Build() is called to build the app and provide the registered types to the dependency injection container.",
+          "grounded": true,
+          "citations_count": 2,
+          "latency_ms": 2713.2,
+          "assertions": {
+            "passed": true,
+            "passed_count": 4,
+            "total_count": 4,
+            "pass_rate": 1.0,
+            "checks": {
+              "refusal_behavior": {
+                "passed": true,
+                "detail": "Successfully answered supported question without refusing"
+              },
+              "citation_presence": {
+                "passed": true,
+                "detail": "Returned 2 citations for supported answer"
+              },
+              "citation_authenticity": {
+                "passed": true,
+                "detail": "All 2 citations strictly match retrieved context chunks"
+              },
+              "key_facts_coverage": {
+                "passed": true,
+                "detail": "All key facts present in response"
+              }
+            }
+          },
+          "judge": {
+            "score": 1.0,
+            "verdict": "PASS",
+            "faithfulness": 1.0,
+            "relevancy": 1.0,
+            "reasoning": "The candidate answer accurately describes how MauiAppBuilder is used to configure fonts via ConfigureFonts and dependency injection via the Services property, as supported by the provided documentation."
+          },
+          "composite_score": 1.0,
+          "passed": true
+        },
+        "delta": 0.875
+      },
+      {
+        "id": "SYNTH-02",
+        "problem_type": "multi_chunk_synthesis",
+        "question": "When a window is Stopped, what platform lifecycle event maps to it on Android and iOS, and what action should be taken?",
+        "baseline": {
+          "answer": "I couldn't find that information in the provided documentation.",
+          "grounded": false,
+          "citations_count": 0,
+          "latency_ms": 1607.7,
+          "assertions": {
+            "passed": false,
+            "passed_count": 1,
+            "total_count": 4,
+            "pass_rate": 0.25,
+            "checks": {
+              "refusal_behavior": {
+                "passed": false,
+                "detail": "False refusal: question was supported by docs but assistant refused"
+              },
+              "citation_presence": {
+                "passed": false,
+                "detail": "Missing citations on a supported factual answer"
+              },
+              "citation_authenticity": {
+                "passed": true,
+                "detail": "No citations to validate"
+              },
+              "key_facts_coverage": {
+                "passed": false,
+                "detail": "Missing expected key fact(s): ['OnStop on Android', 'DidEnterBackground on iOS', 'disconnect from long running processes']"
+              }
+            }
+          },
+          "judge": {
+            "score": 0.0,
+            "verdict": "FAIL",
+            "faithfulness": 0.0,
+            "relevancy": 0.0,
+            "reasoning": "The candidate incorrectly refused to answer the question. The provided documentation explicitly contains a table mapping the 'Stopped' event to 'OnStop' on Android and 'DidEnterBackground' on iOS, as well as the recommended action to take."
+          },
+          "composite_score": 0.125,
+          "passed": false
+        },
+        "improved": {
+          "answer": "When a window is Stopped, it maps to the OnStop event on Android and the DidEnterBackground event on iOS. The action to take is to disconnect from any long-running processes, or cancel any pending requests that might consume device resources.",
+          "grounded": true,
+          "citations_count": 2,
+          "latency_ms": 2332.0,
+          "assertions": {
+            "passed": true,
+            "passed_count": 4,
+            "total_count": 4,
+            "pass_rate": 1.0,
+            "checks": {
+              "refusal_behavior": {
+                "passed": true,
+                "detail": "Successfully answered supported question without refusing"
+              },
+              "citation_presence": {
+                "passed": true,
+                "detail": "Returned 2 citations for supported answer"
+              },
+              "citation_authenticity": {
+                "passed": true,
+                "detail": "All 2 citations strictly match retrieved context chunks"
+              },
+              "key_facts_coverage": {
+                "passed": true,
+                "detail": "All key facts present in response"
+              }
+            }
+          },
+          "judge": {
+            "score": 1.0,
+            "verdict": "PASS",
+            "faithfulness": 1.0,
+            "relevancy": 1.0,
+            "reasoning": "The candidate answer accurately identifies the platform mappings for the 'Stopped' event on Android and iOS and correctly states the recommended action as provided in the documentation."
+          },
+          "composite_score": 1.0,
+          "passed": true
+        },
+        "delta": 0.875
+      }
+    ]
+  }
+}
