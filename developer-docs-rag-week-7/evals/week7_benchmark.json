@@ -1,0 +1,62 @@
+[
+  {
+    "id": "q01_di_registration",
+    "category": "single_hop",
+    "question": "How do you register dependencies in a .NET MAUI application, and in which method is it typically done?",
+    "expected_topics": ["CreateMauiApp", "MauiProgram", "builder.Services", "AddTransient", "AddSingleton"]
+  },
+  {
+    "id": "q02_grid_default_rows",
+    "category": "single_hop",
+    "question": "What is the default number of rows and columns in a Grid if none are explicitly specified?",
+    "expected_topics": ["one row", "one column", "default"]
+  },
+  {
+    "id": "q03_app_lifecycle_events",
+    "category": "single_hop",
+    "question": "What cross-platform lifecycle events are raised on the Application class when an app starts, sleeps, and resumes?",
+    "expected_topics": ["OnStart", "OnSleep", "OnResume", "CreateWindow"]
+  },
+  {
+    "id": "q04_di_service_lifetimes",
+    "category": "multi_hop",
+    "question": "Compare the three service lifetimes supported in .NET MAUI dependency injection and explain when a stateful service should use AddSingleton vs AddScoped.",
+    "expected_topics": ["Transient", "Scoped", "Singleton", "stateful", "AddSingleton", "lifetime"]
+  },
+  {
+    "id": "q05_grid_star_vs_auto",
+    "category": "multi_hop",
+    "question": "How do Star sizing, Auto sizing, and absolute sizing differ when defining Grid RowDefinitions and ColumnDefinitions, and how is proportional space calculated?",
+    "expected_topics": ["Auto", "Star", "GridLength", "proportional", "proportional space", "columns"]
+  },
+  {
+    "id": "q06_window_lifecycle_multihop",
+    "category": "multi_hop",
+    "question": "How does the Window lifecycle relate to the Application lifecycle in .NET MAUI, and which Window event occurs when a window is activated or deactivated?",
+    "expected_topics": ["Window", "Application", "Created", "Activated", "Deactivated", "Destroying"]
+  },
+  {
+    "id": "q07_di_viewmodel_injection",
+    "category": "multi_hop",
+    "question": "How do you register a ViewModel and a Page for constructor injection so that the Page automatically receives its ViewModel dependency?",
+    "expected_topics": ["constructor injection", "AddTransient", "BindingContext", "Page", "ViewModel"]
+  },
+  {
+    "id": "q08_grid_attached_properties",
+    "category": "single_hop",
+    "question": "What attached properties are used to place a view into a specific Grid cell and make it span across multiple rows and columns?",
+    "expected_topics": ["Grid.Row", "Grid.Column", "Grid.RowSpan", "Grid.ColumnSpan"]
+  },
+  {
+    "id": "q09_platform_lifecycle_delegates",
+    "category": "multi_hop",
+    "question": "How do you subscribe to platform-specific lifecycle events on Android and iOS (such as OnCreate or FinishedLaunching) using the MauiAppBuilder lifecycle events delegate?",
+    "expected_topics": ["ConfigureLifecycleEvents", "AndroidLifecycle", "iOSLifecycle", "OnCreate", "FinishedLaunching"]
+  },
+  {
+    "id": "q10_out_of_scope_database",
+    "category": "unanswerable",
+    "question": "How do you configure an Entity Framework Core SQLite database connection with connection pooling in this documentation?",
+    "expected_topics": ["not found", "unavailable", "grounded=false"]
+  }
+]

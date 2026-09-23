@@ -1,0 +1,446 @@
+{
+  "total_questions": 10,
+  "workflow": {
+    "success_rate": 1.0,
+    "avg_latency_sec": 19.07,
+    "avg_steps": 3.0,
+    "avg_tool_calls": 2.0,
+    "avg_llm_calls": 1.0,
+    "avg_total_tokens": 2783.7,
+    "avg_topic_coverage": 0.57
+  },
+  "agent": {
+    "success_rate": 1.0,
+    "avg_latency_sec": 22.97,
+    "avg_steps": 4.3,
+    "avg_tool_calls": 3.4,
+    "avg_llm_calls": 5.3,
+    "avg_total_tokens": 9519.6,
+    "avg_topic_coverage": 0.57
+  },
+  "breakdown": {
+    "single_hop": {
+      "count": 4,
+      "wf_avg_latency": 2.71,
+      "ag_avg_latency": 16.84,
+      "wf_avg_coverage": 0.65,
+      "ag_avg_coverage": 0.45
+    },
+    "multi_hop": {
+      "count": 5,
+      "wf_avg_latency": 35.55,
+      "ag_avg_latency": 27.05,
+      "wf_avg_coverage": 0.63,
+      "ag_avg_coverage": 0.78
+    }
+  },
+  "results": [
+    {
+      "id": "q01_di_registration",
+      "category": "single_hop",
+      "question": "How do you register dependencies in a .NET MAUI application, and in which method is it typically done?",
+      "expected_topics": [
+        "CreateMauiApp",
+        "MauiProgram",
+        "builder.Services",
+        "AddTransient",
+        "AddSingleton"
+      ],
+      "workflow": {
+        "success": true,
+        "latency_sec": 3.56,
+        "steps": 3,
+        "tool_calls": 2,
+        "llm_calls": 1,
+        "prompt_tokens": 2018,
+        "completion_tokens": 330,
+        "total_tokens": 2348,
+        "grounded": true,
+        "citations_count": 3,
+        "topic_coverage": 0.6,
+        "answer_snippet": "In a .NET MAUI application, the registration of types requiring dependency injection should typically be performed in a single method called CreateMauiApp in the MauiProgram class. This method creates..."
+      },
+      "agent": {
+        "success": true,
+        "stop_reason": "completed",
+        "latency_sec": 14.29,
+        "steps": 4,
+        "tool_calls": 3,
+        "llm_calls": 5,
+        "prompt_tokens": 6299,
+        "completion_tokens": 2319,
+        "total_tokens": 8618,
+        "grounded": true,
+        "citations_count": 3,
+        "topic_coverage": 0.8,
+        "answer_snippet": "In a .NET MAUI application, registration of types requiring dependency injection is typically performed in a single method invoked early in the app's lifecycle, specifically in the `CreateMauiApp` met..."
+      }
+    },
+    {
+      "id": "q02_grid_default_rows",
+      "category": "single_hop",
+      "question": "What is the default number of rows and columns in a Grid if none are explicitly specified?",
+      "expected_topics": [
+        "one row",
+        "one column",
+        "default"
+      ],
+      "workflow": {
+        "success": true,
+        "latency_sec": 2.3,
+        "steps": 3,
+        "tool_calls": 2,
+        "llm_calls": 1,
+        "prompt_tokens": 4270,
+        "completion_tokens": 117,
+        "total_tokens": 4387,
+        "grounded": true,
+        "citations_count": 1,
+        "topic_coverage": 1.0,
+        "answer_snippet": "By default, a Grid contains one row and one column."
+      },
+      "agent": {
+        "success": true,
+        "stop_reason": "Maximum step budget reached (6 steps).",
+        "latency_sec": 17.33,
+        "steps": 6,
+        "tool_calls": 6,
+        "llm_calls": 7,
+        "prompt_tokens": 7740,
+        "completion_tokens": 2073,
+        "total_tokens": 9813,
+        "grounded": true,
+        "citations_count": 1,
+        "topic_coverage": 1.0,
+        "answer_snippet": "By default, a .NET MAUI Grid contains one row and one column."
+      }
+    },
+    {
+      "id": "q03_app_lifecycle_events",
+      "category": "single_hop",
+      "question": "What cross-platform lifecycle events are raised on the Application class when an app starts, sleeps, and resumes?",
+      "expected_topics": [
+        "OnStart",
+        "OnSleep",
+        "OnResume",
+        "CreateWindow"
+      ],
+      "workflow": {
+        "success": true,
+        "latency_sec": 2.64,
+        "steps": 3,
+        "tool_calls": 2,
+        "llm_calls": 1,
+        "prompt_tokens": 2929,
+        "completion_tokens": 280,
+        "total_tokens": 3209,
+        "grounded": true,
+        "citations_count": 2,
+        "topic_coverage": 0.0,
+        "answer_snippet": "Based on the provided documentation, cross-platform lifecycle events are raised on the `Window` class (rather than the `Application` class) when an app transitions between states. These events include..."
+      },
+      "agent": {
+        "success": true,
+        "stop_reason": "completed",
+        "latency_sec": 6.44,
+        "steps": 3,
+        "tool_calls": 2,
+        "llm_calls": 4,
+        "prompt_tokens": 3898,
+        "completion_tokens": 639,
+        "total_tokens": 4537,
+        "grounded": true,
+        "citations_count": 3,
+        "topic_coverage": 0.0,
+        "answer_snippet": "The provided documentation states that cross-platform lifecycle events are raised on the `Window` class, not the Application class. When an app starts, the `Created` and `Activated` events are raised...."
+      }
+    },
+    {
+      "id": "q04_di_service_lifetimes",
+      "category": "multi_hop",
+      "question": "Compare the three service lifetimes supported in .NET MAUI dependency injection and explain when a stateful service should use AddSingleton vs AddScoped.",
+      "expected_topics": [
+        "Transient",
+        "Scoped",
+        "Singleton",
+        "stateful",
+        "AddSingleton",
+        "lifetime"
+      ],
+      "workflow": {
+        "success": true,
+        "latency_sec": 5.0,
+        "steps": 3,
+        "tool_calls": 2,
+        "llm_calls": 1,
+        "prompt_tokens": 2841,
+        "completion_tokens": 437,
+        "total_tokens": 3278,
+        "grounded": true,
+        "citations_count": 3,
+        "topic_coverage": 1.0,
+        "answer_snippet": "In .NET MAUI dependency injection, there are three main service lifetimes:\n- AddSingleton<T>: Creates a single instance of the object that remains for the entire lifetime of the app.\n- AddTransient<T>..."
+      },
+      "agent": {
+        "success": true,
+        "stop_reason": "completed",
+        "latency_sec": 18.67,
+        "steps": 4,
+        "tool_calls": 3,
+        "llm_calls": 5,
+        "prompt_tokens": 7159,
+        "completion_tokens": 3148,
+        "total_tokens": 10307,
+        "grounded": true,
+        "citations_count": 2,
+        "topic_coverage": 1.0,
+        "answer_snippet": "In dependency injection, the three service lifetimes are:\n1. AddSingleton<T>: Creates a single instance of the object that remains for the lifetime of the app. It is recommended for shared services su..."
+      }
+    },
+    {
+      "id": "q05_grid_star_vs_auto",
+      "category": "multi_hop",
+      "question": "How do Star sizing, Auto sizing, and absolute sizing differ when defining Grid RowDefinitions and ColumnDefinitions, and how is proportional space calculated?",
+      "expected_topics": [
+        "Auto",
+        "Star",
+        "GridLength",
+        "proportional",
+        "proportional space",
+        "columns"
+      ],
+      "workflow": {
+        "success": true,
+        "latency_sec": 164.11,
+        "steps": 3,
+        "tool_calls": 2,
+        "llm_calls": 1,
+        "prompt_tokens": 2001,
+        "completion_tokens": 531,
+        "total_tokens": 2532,
+        "grounded": true,
+        "citations_count": 3,
+        "topic_coverage": 0.83,
+        "answer_snippet": "When defining Grid RowDefinitions and ColumnDefinitions, sizes can be specified using three different values:\n- **Absolute**: The row height or column width is a specified value in device-independent ..."
+      },
+      "agent": {
+        "success": true,
+        "stop_reason": "Maximum execution time limit reached (30.0s).",
+        "latency_sec": 54.28,
+        "steps": 4,
+        "tool_calls": 3,
+        "llm_calls": 5,
+        "prompt_tokens": 4646,
+        "completion_tokens": 8067,
+        "total_tokens": 12713,
+        "grounded": true,
+        "citations_count": 3,
+        "topic_coverage": 0.83,
+        "answer_snippet": "In Grid RowDefinitions and ColumnDefinitions, sizing differs as follows:\n- Absolute: The row height or column width is a specified value in device-independent units (represented as a number in XAML).\n..."
+      }
+    },
+    {
+      "id": "q06_window_lifecycle_multihop",
+      "category": "multi_hop",
+      "question": "How does the Window lifecycle relate to the Application lifecycle in .NET MAUI, and which Window event occurs when a window is activated or deactivated?",
+      "expected_topics": [
+        "Window",
+        "Application",
+        "Created",
+        "Activated",
+        "Deactivated",
+        "Destroying"
+      ],
+      "workflow": {
+        "success": true,
+        "latency_sec": 3.15,
+        "steps": 3,
+        "tool_calls": 2,
+        "llm_calls": 1,
+        "prompt_tokens": 2399,
+        "completion_tokens": 299,
+        "total_tokens": 2698,
+        "grounded": true,
+        "citations_count": 2,
+        "topic_coverage": 0.5,
+        "answer_snippet": ".NET MAUI raises cross-platform lifecycle events on the Window class when an app transitions between its different execution states. For the activation and deactivation of a window, the Window class d..."
+      },
+      "agent": {
+        "success": true,
+        "stop_reason": "completed",
+        "latency_sec": 23.83,
+        "steps": 3,
+        "tool_calls": 2,
+        "llm_calls": 4,
+        "prompt_tokens": 3615,
+        "completion_tokens": 3225,
+        "total_tokens": 6840,
+        "grounded": true,
+        "citations_count": 3,
+        "topic_coverage": 0.67,
+        "answer_snippet": "In .NET MAUI, the Window class defines cross-platform lifecycle events when an app transitions between execution states. Specifically, the 'Activated' event occurs when an app transitions to the activ..."
+      }
+    },
+    {
+      "id": "q07_di_viewmodel_injection",
+      "category": "multi_hop",
+      "question": "How do you register a ViewModel and a Page for constructor injection so that the Page automatically receives its ViewModel dependency?",
+      "expected_topics": [
+        "constructor injection",
+        "AddTransient",
+        "BindingContext",
+        "Page",
+        "ViewModel"
+      ],
+      "workflow": {
+        "success": true,
+        "latency_sec": 2.64,
+        "steps": 3,
+        "tool_calls": 2,
+        "llm_calls": 1,
+        "prompt_tokens": 2421,
+        "completion_tokens": 203,
+        "total_tokens": 2624,
+        "grounded": true,
+        "citations_count": 1,
+        "topic_coverage": 0.6,
+        "answer_snippet": "To register dependencies for automatic dependency resolution (such as a Page receiving its ViewModel dependency via constructor injection), you need to register all dependencies\u2014including any types th..."
+      },
+      "agent": {
+        "success": true,
+        "stop_reason": "completed",
+        "latency_sec": 14.32,
+        "steps": 4,
+        "tool_calls": 3,
+        "llm_calls": 5,
+        "prompt_tokens": 5887,
+        "completion_tokens": 1344,
+        "total_tokens": 7231,
+        "grounded": true,
+        "citations_count": 3,
+        "topic_coverage": 0.8,
+        "answer_snippet": "To register a ViewModel and a Page for constructor injection so that the Page automatically receives its ViewModel dependency, you need to register all dependencies\u2014including any types that require th..."
+      }
+    },
+    {
+      "id": "q08_grid_attached_properties",
+      "category": "single_hop",
+      "question": "What attached properties are used to place a view into a specific Grid cell and make it span across multiple rows and columns?",
+      "expected_topics": [
+        "Grid.Row",
+        "Grid.Column",
+        "Grid.RowSpan",
+        "Grid.ColumnSpan"
+      ],
+      "workflow": {
+        "success": true,
+        "latency_sec": 2.33,
+        "steps": 3,
+        "tool_calls": 2,
+        "llm_calls": 1,
+        "prompt_tokens": 1685,
+        "completion_tokens": 132,
+        "total_tokens": 1817,
+        "grounded": true,
+        "citations_count": 1,
+        "topic_coverage": 1.0,
+        "answer_snippet": "To position child views in specific Grid cells, the `Grid.Column` and `Grid.Row` attached properties are used. To make child views span across multiple rows and columns, the `Grid.RowSpan` and `Grid.C..."
+      },
+      "agent": {
+        "success": true,
+        "stop_reason": "completed",
+        "latency_sec": 29.28,
+        "steps": 5,
+        "tool_calls": 4,
+        "llm_calls": 6,
+        "prompt_tokens": 7211,
+        "completion_tokens": 2646,
+        "total_tokens": 9857,
+        "grounded": true,
+        "citations_count": 1,
+        "topic_coverage": 0.0,
+        "answer_snippet": "To place a view into a specific Grid cell and make it span across multiple rows and columns, the following attached properties are used:\n- `Row`: indicates the row alignment of a view within a parent ..."
+      }
+    },
+    {
+      "id": "q09_platform_lifecycle_delegates",
+      "category": "multi_hop",
+      "question": "How do you subscribe to platform-specific lifecycle events on Android and iOS (such as OnCreate or FinishedLaunching) using the MauiAppBuilder lifecycle events delegate?",
+      "expected_topics": [
+        "ConfigureLifecycleEvents",
+        "AndroidLifecycle",
+        "iOSLifecycle",
+        "OnCreate",
+        "FinishedLaunching"
+      ],
+      "workflow": {
+        "success": true,
+        "latency_sec": 2.85,
+        "steps": 3,
+        "tool_calls": 2,
+        "llm_calls": 1,
+        "prompt_tokens": 2133,
+        "completion_tokens": 304,
+        "total_tokens": 2437,
+        "grounded": true,
+        "citations_count": 2,
+        "topic_coverage": 0.2,
+        "answer_snippet": "To respond to an Android lifecycle delegate being invoked, call the ConfigureLifecycleEvents method on the MauiAppBuilder object in the CreateMauiApp method of your MauiProgram class, and then call th..."
+      },
+      "agent": {
+        "success": true,
+        "stop_reason": "completed",
+        "latency_sec": 24.14,
+        "steps": 5,
+        "tool_calls": 4,
+        "llm_calls": 6,
+        "prompt_tokens": 8593,
+        "completion_tokens": 4094,
+        "total_tokens": 12687,
+        "grounded": true,
+        "citations_count": 3,
+        "topic_coverage": 0.6,
+        "answer_snippet": "To subscribe to platform-specific lifecycle events on Android and iOS (or Mac Catalyst), you call the ConfigureLifecycleEvents method on the MauiAppBuilder object within the CreateMauiApp method of yo..."
+      }
+    },
+    {
+      "id": "q10_out_of_scope_database",
+      "category": "unanswerable",
+      "question": "How do you configure an Entity Framework Core SQLite database connection with connection pooling in this documentation?",
+      "expected_topics": [
+        "not found",
+        "unavailable",
+        "grounded=false"
+      ],
+      "workflow": {
+        "success": true,
+        "latency_sec": 2.07,
+        "steps": 3,
+        "tool_calls": 2,
+        "llm_calls": 1,
+        "prompt_tokens": 2462,
+        "completion_tokens": 45,
+        "total_tokens": 2507,
+        "grounded": false,
+        "citations_count": 0,
+        "topic_coverage": 0.0,
+        "answer_snippet": "The provided documentation does not contain information on how to configure an Entity Framework Core SQLite database connection with connection pooling."
+      },
+      "agent": {
+        "success": true,
+        "stop_reason": "completed",
+        "latency_sec": 27.1,
+        "steps": 5,
+        "tool_calls": 4,
+        "llm_calls": 6,
+        "prompt_tokens": 10483,
+        "completion_tokens": 2110,
+        "total_tokens": 12593,
+        "grounded": false,
+        "citations_count": 0,
+        "topic_coverage": 0.0,
+        "answer_snippet": "The provided documentation does not contain information on how to configure an Entity Framework Core SQLite database connection with connection pooling."
+      }
+    }
+  ]
+}

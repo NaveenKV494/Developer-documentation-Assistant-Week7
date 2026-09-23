@@ -1,0 +1,8 @@
+chromadb
+streamlit
+python-dotenv
+pydantic>=2
+google-genai
+pypdf
+python-docx
+
